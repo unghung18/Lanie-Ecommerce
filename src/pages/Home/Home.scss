@@ -1,0 +1,66 @@
+@use '../../sass/' as *;
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        padding: 20px 25px;
+        background-color: #f8f8f8;
+        @include flex(center, center);
+
+        &:nth-child(2) {
+            color: #fff;
+            background-color: $main-color;
+        }
+
+        .feature-icon {
+            margin-right: 15px;
+            width: 50px;
+            height: 50px;
+        }
+
+        h2 {
+            text-align: center;
+
+            @include tablet {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+/* =============================================== */
+
+/* =================================== */
+.top-seller-products {
+
+    .top-seller-products__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include small {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .loadmore {
+        display: flex;
+        justify-content: center;
+        padding-top: 48px;
+    }
+}
+
+.banner {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
